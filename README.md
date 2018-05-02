@@ -11,5 +11,5 @@ To run from the command-line:
 * Rename the file `example-<_db_>/env.template.php` to `example-<_db_>/env.php`
 * In the file `example-<_db_>/env.php`, change the connection variables to match those of your Compose database instance.
 * Start the webserver with `php -S localhost:8080`
-*
+
 The application will be served on http://localhost:8080 and can be opened in a browser.
