@@ -8,8 +8,8 @@ To run from the command-line:
 
 * Clone this repo to the root of your web server's document directory
 * Navigate to the example-<_db_> directory
-* Rename the file `example-<_db_>/env.template.php` to `example-<_db_>/env.php`
-* In the file `example-<_db_>/env.php`, change the connection variables to match those of your Compose database instance.
+* Rename the file `example-<_db_>/config.template.php` to `example-<_db_>/config.php`
+* In the file `example-<_db_>/config.php`, change the connection variables to match those of your Compose database instance.
 * Start the webserver with `php -S localhost:8080`
 
 The application will be served on http://localhost:8080 and can be opened in a browser.
