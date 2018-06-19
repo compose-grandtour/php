@@ -4,5 +4,5 @@ This example uses [php-amqplib](https://packagist.org/packages/php-amqplib/php-a
 
 ## Connection Details
 
-The connection string provided by your Compose Redis deployment should go into the file `config.php` (created by copying `config.template.php`).
+The connection string provided by your Compose RabbitMQ deployment should go into the file `config.php` (created by copying `config.template.php`).
 
