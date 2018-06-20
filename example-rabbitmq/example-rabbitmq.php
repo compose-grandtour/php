@@ -16,6 +16,7 @@ function get_word($message) {
     $data = json_decode($message->body, true);
     echo $data['word'];
     $message->delivery_info['channel']->basic_ack($message->delivery_info['delivery_tag']);
+    // only process one
     exit;
 }
 
@@ -33,9 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
         $channel->basic_publish($amqp_msg, '', 'grand_tour');
 
         echo $word;
+        // we're done
         exit;
     }
 }
 
-$channel->wait();
+try {
+    $channel->wait(null, false, 3);
+} catch(\PhpAmqpLib\Exception\AMQPTimeoutException $e) {
+    echo "no messages";
+}
 
